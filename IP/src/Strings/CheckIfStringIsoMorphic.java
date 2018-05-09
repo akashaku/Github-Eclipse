@@ -1,4 +1,4 @@
-package temp;
+package Strings;
 
 import java.util.HashMap;
 
@@ -6,8 +6,8 @@ public class CheckIfStringIsoMorphic {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String str1 = "aab";
-		String str2 = "xzy";
+		String str1 = "wfca";
+		String str2 = "yssy";
 
 		if (str1.length() != str2.length())
 			System.out.println("FAlse");
