@@ -1,14 +1,19 @@
-package temp;
+package Strings;
 
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class PrintAllAnagramTogether {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String [] words = {"cat", "dog", "tac", "god", "act"};
+		Scanner sc = new Scanner(System.in);
+		int soa = sc.nextInt();
+		String [] words= new String [soa];
+		for(int i=0;i<soa;i++){
+			words[i]=sc.next();
+		}
 		
 		HashMap<String,ArrayList<Integer>> map = new HashMap<>();
 		
@@ -53,9 +58,9 @@ public class PrintAllAnagramTogether {
 			ArrayList<Integer> resultarraylist = map.get(mapres.get(i));
 			if(resultarraylist.size()>1){
 				for(int k=0;k<resultarraylist.size();k++){
-				System.out.print(words[resultarraylist.get(k)]+" ");
+				System.out.println(words[resultarraylist.get(k)]+"");
 				}
-				System.out.println();
+				
 			}
 			
 			

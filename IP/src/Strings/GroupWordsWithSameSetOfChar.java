@@ -1,19 +1,23 @@
-package temp;
+package Strings;
 
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 
 public class GroupWordsWithSameSetOfChar {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int soa= sc.nextInt();
+		String [] arr= new String[soa];
+		for(int i=0;i<soa;i++){
+			arr[i]=sc.next();
+		}
 		
-		String[] arr = { "may", "student", "students", "dog",
-                "studentssess", "god", "cat", "act", "tab",
-                "bat", "flow", "wolf", "lambs", "amy", "yam",
-                "balms", "looped", "poodle"};
+		
 		
 	
 		HashMap<String, ArrayList<Integer>> map = new HashMap<>();

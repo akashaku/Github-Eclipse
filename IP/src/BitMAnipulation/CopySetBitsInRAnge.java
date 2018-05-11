@@ -1,10 +1,13 @@
 package BitMAnipulation;
 
+import java.util.Scanner;
+
 public class CopySetBitsInRAnge {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int x = 10, y = 13, l = 2, r = 3;
+		Scanner sc = new Scanner(System.in); 
+		int x = sc.nextInt(), y = sc.nextInt(), l = sc.nextInt(), r = sc.nextInt();
 
 		// finding those set bits in y
 

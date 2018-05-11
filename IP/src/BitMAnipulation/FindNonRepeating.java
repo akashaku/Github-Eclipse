@@ -1,13 +1,19 @@
 package BitMAnipulation;
 
+import java.util.Scanner;
+
 public class FindNonRepeating {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		Scanner sc = new Scanner(System.in);
+		int soa=sc.nextInt();
 		
-		int arr[] = {2, 3, 7, 9, 11, 2, 3, 11};
-		
+		int [] arr = new int[soa];
+		for(int i=0;i<soa;i++){
+			arr[i]=sc.nextInt();
+		}
 		
 		int x=0;
 		int y=0;

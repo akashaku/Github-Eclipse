@@ -1,12 +1,15 @@
-package temp;
+package Strings;
+
+import java.util.Scanner;
 
 public class KAnagram {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String  str1 = "anagram";
-		String str2 = "grammar" ;
-		int k = 3;
+		Scanner sc = new Scanner(System.in);
+		String  str1 = sc.nextLine();
+		String str2 = sc.nextLine();
+		int k = sc.nextInt();
 		
 		int [] arr= new int [26];
 		for(int i=0;i<str1.length();i++){
@@ -30,10 +33,10 @@ public class KAnagram {
 			
 		}
 		if(noc<=k){
-			System.out.println("Yes");
+			System.out.println("true");
 		}
 		else{
-			System.out.println("NO");
+			System.out.println("false");
 		}
 
 	}

@@ -1,11 +1,13 @@
 package BitMAnipulation;
 
+import java.util.Scanner;
+
 public class FindOnlySetBit {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		int n=16;
+		Scanner sc = new Scanner(System.in); 
+		int n=sc.nextInt();
 		
 		
 		for(int i=0;i<n;i++){

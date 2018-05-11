@@ -34,54 +34,51 @@ public class ConstructTreefromPreOrder {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		int soa = sc.nextInt();
-		int[] data = new int[soa];
-		char[] info = new char[soa];
-
-		for (int i = 0; i < soa; i++) {
-			data[i] = sc.nextInt();
+		Scanner scn = new Scanner(System.in);
+		int[] preData = new int[Integer.parseInt(scn.next())];
+		for (int i = 0; i < preData.length; i++) {
+			preData[i] = Integer.parseInt(scn.next());
 		}
-		for (int i = 0; i < soa; i++) {
-			info[i] = sc.next().charAt(0);
+		char[] lnData = new char[preData.length];
+		for (int i = 0; i < lnData.length; i++) {
+			lnData[i] = scn.next().charAt(0);
 		}
 
-		Node[] tree = new Node[soa];
-		for (int i = 0; i < soa; i++) {
-			tree[i] = new Node(data[i], null, null);
+		Node root = construct(preData, lnData);
+		if (root == null) {
+			System.out.println("Invalid");
+		} else {
+			display(root);
 		}
-
-		solve(data, info, tree, 0);
-		display(tree[0]);
 
 	}
 
-	static int i = 0;
+	static int idx = 0;
 
-	public static void solve(int[] data, char[] info, Node[] tree, int j) {
-		if (tree == null)
-			return;
-		if (info[j] == 'L')
-			return;
+	private static Node construct(int[] preData, char[] lnData) {
+		if (idx >= preData.length)
+			return null;
 
-		if (info[i] == 'N' && tree[j].left == null) {
-			tree[j].left = tree[i + 1];
-			i++;
-			solve(data, info, tree, j + 1);
-		}
+		Node node = new Node(preData[idx], null, null);
 
-		if (tree[j].left == null) {
-			tree[j].left = tree[i + 1];
-			i++;
-		} else if (tree[j].right == null) {
-			tree[j].right = tree[i + 1];
-			i++;
-			solve(data, info, tree, j + 1);
+		if (lnData[idx] != 'L') {
+			idx++;
+
+			Node left = construct(preData, lnData);
+
+			node.left = left;
+
+			Node right = construct(preData, lnData);
+
+			node.right = right;
 
 		} else {
+			idx++;
+			return node;
 
 		}
-	}
 
+		return node;
+
+	}
 }

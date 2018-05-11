@@ -1,12 +1,15 @@
-package temp;
+package Strings;
+
+import java.util.Scanner;
 
 public class LongestpalindromicSubstring {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String ques = "forgeeksskeegfor";
-
+		Scanner sc = new Scanner(System.in);
+		String ques = sc.next();
+		
 		int ml = Integer.MIN_VALUE;
 		
 		int start = 0;

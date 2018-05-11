@@ -1,11 +1,14 @@
 package BitMAnipulation;
 
+import java.util.Scanner;
+
 public class BinaryRepOfNo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int no = 16;
+		Scanner sc = new Scanner(System.in); 
+		int no=sc.nextInt();
 
 		int bno = 0;
 		int mult = 1;

@@ -1,5 +1,7 @@
 package BitMAnipulation;
 
+import java.util.Scanner;
+
 public class CheckBleak {
 
 	public static void main(String[] args) {
@@ -9,8 +11,11 @@ public class CheckBleak {
 		// it cannot be represented as sum of a positive number x and set bit
 		// count in x, i.e., x + countSetBits(x) is not equal to n for any
 		// non-negative number x.
+		
+		Scanner sc = new Scanner(System.in);
+		int n= sc.nextInt();
 
-		int n = 4;
+		
 
 		int nsb = 0;
 		int no = n - 1;

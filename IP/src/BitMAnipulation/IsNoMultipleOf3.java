@@ -1,5 +1,7 @@
 package BitMAnipulation;
 
+import java.util.Scanner;
+
 public class IsNoMultipleOf3 {
 
 	public static void main(String[] args) {
@@ -10,7 +12,8 @@ public class IsNoMultipleOf3 {
 		// divisible by 3
 		// T.C --> O(log2n)
 
-		int num = 24;
+		Scanner sc = new Scanner(System.in); 
+		int num = sc.nextInt();
 		int sum = 0;
 		while (num > 0) {
 			sum += num % 10;

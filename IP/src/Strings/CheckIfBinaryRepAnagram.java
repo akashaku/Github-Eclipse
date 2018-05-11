@@ -1,12 +1,14 @@
-package temp;
+package Strings;
+
+import java.util.Scanner;
 
 public class CheckIfBinaryRepAnagram {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		int a = 4, b = 5 ;
-		
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b=sc.nextInt();
 		
 		int c1=0;
 		int c2=0;

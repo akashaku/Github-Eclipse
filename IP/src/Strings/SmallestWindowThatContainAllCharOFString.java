@@ -1,4 +1,4 @@
-package temp;
+package Strings;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class SmallestWindowThatContainAllCharOFString {
 		String ques = sc.nextLine();
 
 		char[] arr = ques.toCharArray();
-		String fans = "";
+		
 
 		boolean[] unique = new boolean[26];
 		for (int i = 0; i < arr.length; i++) {
@@ -58,7 +58,7 @@ public class SmallestWindowThatContainAllCharOFString {
 		}
 
 		System.out.println(ml);
-		System.out.println(ques.substring(start-1,end));
+		
 
 	}
 

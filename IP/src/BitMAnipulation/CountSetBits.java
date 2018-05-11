@@ -1,10 +1,13 @@
 package BitMAnipulation;
 
+import java.util.Scanner;
+
 public class CountSetBits {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n = 7;
+		Scanner sc = new Scanner(System.in); 
+		int n = sc.nextInt();
 		int bc=0;
 		while(n>0){
 			if(n%2==1)

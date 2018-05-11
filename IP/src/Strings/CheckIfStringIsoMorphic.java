@@ -1,13 +1,16 @@
 package Strings;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class CheckIfStringIsoMorphic {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String str1 = "wfca";
-		String str2 = "yssy";
+		Scanner sc = new Scanner(System.in);
+		
+		String str1 = sc.next();
+		String str2 = sc.next();
 
 		if (str1.length() != str2.length())
 			System.out.println("FAlse");

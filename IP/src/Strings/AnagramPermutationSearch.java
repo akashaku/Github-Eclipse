@@ -1,14 +1,17 @@
-package temp;
+package Strings;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class AnagramPermutationSearch {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String text = "BACDGABCDA";
-		String pat = "ABCD";
+		Scanner sc = new Scanner(System.in);
+		String text = sc.next();
+		String pat = sc.next();
+		
 
 		HashMap<Character, Integer> map = new HashMap<>();
 		HashMap<Character, Integer> smap = new HashMap<>();
@@ -58,7 +61,7 @@ public class AnagramPermutationSearch {
 
 				}
 				if (checkEqual(smap, map) == true) {
-					System.out.println("Found At index -> " + start);
+					System.out.print("Found At index -> " + start);
 
 					char ch = text.charAt(start);
 					smap.put(ch, smap.get(ch) - 1);
